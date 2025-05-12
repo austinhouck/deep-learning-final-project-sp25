@@ -43,7 +43,7 @@ Our re-implementation closely replicates the results from the paper. Graphs belo
 ![](/results/soft_watermark_gamma_sweep.png)
 ![](/results/soft_watermark_delta_sweep.png)
 
-These results show that with a longer sequence length, it is easier to detect a watermark. Aditionally, decreasing $\gamma$\ and increasing $\delta$ improves watermark detectability, at the cost of impacting text quality.
+These results show that with a longer sequence length, it is easier to detect a watermark. Aditionally, decreasing $\gamma$ and increasing $\delta$ improves watermark detectability, at the cost of impacting text quality.
 
 ## Conclusion
 In the context of the paper and the broader area of watermarking, our analysis shows that watermark detectability depends on sequence length and word choice. Priming the LLM to use specific words, either through restriction or by increasing logit scores, embeds a watermark in the output, but this comes at the cost of not allowing the LLM to choose the word it deems best, which results in worse text quality.
