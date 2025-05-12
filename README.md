@@ -19,14 +19,14 @@ This repo has the following structure:
 ## Re-implementation Details
 We implement two watermarking schemes: hard red-list and soft red-list watermarking. Both watermarking schemes randomly divide the next word's logits into a red and green list using the previous token as the seed. Hard red-list watermarking bans the use red tokens, while soft red-list watermarking adds $\delta$ to the logits in the green list. The green list size is based on $\gamma$.
 
-We used the `c4` dataset and the `OPT-1.3b` model during our experiments. One challenge we faced was the model seemed to repeat itself at times, but we believe this is due to the small size of the model.
+We used the `c4` dataset and the `OPT-1.3B` model during our experiments. One challenge we faced was the model seemed to repeat itself at times, but we believe this is due to the small size of the model.
 
 ## Reproduction Steps
-To run the code, we reccommend uploading `code/notebook.ipynb` to Google Collab and using the free T4 GPU. Running the code without a GPU will take a long time.
+To run the code, we reccommend uploading `code/notebook.ipynb` to Google Colab and using the free T4 GPU. Running the code without a GPU will take a long time.
 
-After uploading the file to Google Collab, run each cell in order to reproduce results.
+After uploading the file to Google Colab, run each cell in order to reproduce results.
 
-Following libraries are used in the notebook. `code/notebook.ipynb` includes an install cell to install necessary requirements on Google Collab:
+Following libraries are used in the notebook. `code/notebook.ipynb` includes an install cell to install necessary requirements on Google Colab:
 - `datasets`
 - `torch`
 - `transformers`
@@ -50,17 +50,17 @@ In the context of the paper and the broader area of watermarking, our analysis s
 
 ## References
 
-1. J. Kirchenbauer, J. Geiping, Y. Wen, J. Katz, I. Miers, and T. Goldstein,  
-   *A Watermark for Large Language Models*, 2024.  
+1. J. Kirchenbauer, J. Geiping, Y. Wen, J. Katz, I. Miers, and T. Goldstein,
+   *A Watermark for Large Language Models*, 2024.
    [Online] Available: https://arxiv.org/abs/2301.10226
 
-2. J. Dodge, M. Sap, A. Marasovic, W. Agnew, G. Ilharco, D. Groeneveld, and M. Gardner,  
-   *Documenting the English Colossal Clean Crawled Corpus*, CoRR, vol. abs/2104.08758, 2021.  
+2. J. Dodge, M. Sap, A. Marasovic, W. Agnew, G. Ilharco, D. Groeneveld, and M. Gardner,
+   *Documenting the English Colossal Clean Crawled Corpus*, CoRR, vol. abs/2104.08758, 2021.
    [Online] Available: https://arxiv.org/abs/2104.08758
 
-3. S. Zhang, S. Roller, N. Goyal, M. Artetxe, M. Chen, S. Chen, C. Dewan, M. Diab, X. Li, X. V. Lin,  
-   T. Mihaylov, M. Ott, S. Shleifer, K. Shuster, D. Simig, P. S. Koura, A. Sridhar, T. Wang, and L. Zettlemoyer,  
-   *OPT: Open Pre-trained Transformer Language Models*, 2022.  
+3. S. Zhang, S. Roller, N. Goyal, M. Artetxe, M. Chen, S. Chen, C. Dewan, M. Diab, X. Li, X. V. Lin,
+   T. Mihaylov, M. Ott, S. Shleifer, K. Shuster, D. Simig, P. S. Koura, A. Sridhar, T. Wang, and L. Zettlemoyer,
+   *OPT: Open Pre-trained Transformer Language Models*, 2022.
    [Online] Available: https://arxiv.org/abs/2205.01068
 ## Acknowledgements
 This project was completed as a part of the coursework for CS4782 at Cornell University. We would like to thank the course instructors and course staff for their guidance throughout the semester.
